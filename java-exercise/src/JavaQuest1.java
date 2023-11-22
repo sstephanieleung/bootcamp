@@ -39,7 +39,7 @@ public class JavaQuest1 {
     // subtraction
     // code here with tips, pls fix
     // subtract = first - second
-    int subtract = first - second;
+    int subtract = second - first;
     System.out.println("The subtraction reuslt is " + subtract);
 
     // another sum
@@ -52,8 +52,8 @@ public class JavaQuest1 {
 
     // declare two boolean variable with true and false value
     // code here
-    boolean varB = true;
-    boolean varC = false;
+    boolean varB = false;
+    boolean varC = true;
     System.out.println("The variable varB is " + varB);
     System.out.println("The variable varC is " + varC);
 
@@ -76,7 +76,7 @@ public class JavaQuest1 {
     int o = 8;
     int y = 4;
     // code here
-    int x = reminder;
+    int x = 2;
     int result = e - o * x / y;
     System.out.println("The result is " + result);
 
