@@ -152,7 +152,28 @@ public class DemoOperator {
         System.out.println("transFee is " + transFee);
         System.out.println("totalAmount is " + totalAmount);
 
+        // >, <, >=, <=, !
+        boolean isPassed = false;
+        if (!isPassed) {
+            System.out.println("isPassed is false.");
+        } 
 
+        isPassed = true; // re-assignment
+        System.out.println("isPassed is true.");
+
+        // There are 9 types of data: 8 Premitive + 1 String
+        String str = "www.apple.com";
+        if (str.length() < 10 || "www.apple.com".equals(str)) {
+            System.out.println("length < 10 or www.apple.com");
+        }
+
+        String s = ""; //empty string, length = 0;
+        String s1 = " "; //this is not an empty string as it contains a space, length = 1
+
+        s += "hello";
+        if (!s.isEmpty()) {
+            System.out.println("s is not empty.");
+        }
 
         int dayOfWeek = 3;
         String dayName;
