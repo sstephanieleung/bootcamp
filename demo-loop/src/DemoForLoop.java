@@ -1,3 +1,5 @@
+import java.lang.annotation.Target;
+
 public class DemoForLoop {
     public static void main(String[] args) {
 
@@ -53,20 +55,20 @@ public class DemoForLoop {
                 sum2 += i;
             }
         }
-        /*
-         * for (int i = 0 ; i < 101 ; i++) {
-         * if (i < 51){
-         * if (i % 2 == 1) {
-         * sum1 += i;
-         * }
-         * } else {
-         * if (i % 2 == 0){
-         * sum2 += i;
-         * }
-         * }
-         * 
-         * }
-         */
+        
+        //  for (int i = 0 ; i < 101 ; i++) {
+        //  if (i < 51){
+        //  if (i % 2 == 1) {
+        //  sum1 += i;
+        //  }
+        //  } else {
+        //  if (i % 2 == 0){
+        //  sum2 += i;
+        //  }
+        //  }
+         
+        //  }
+         
 
         total = sum1 * sum2;
         System.out.println("Sum1 x sum2 is " + total);
@@ -91,14 +93,47 @@ public class DemoForLoop {
         int j = 0;
         for (int i = 0; i < 100; i++) {
             if (i % 2 == 0)
-                continue;         
-            if (sum + i >= 200)
+                continue;      
+  
+            if (sum >= 200) {
+                j -= i;
                 break;
+            } 
+            j = i;              
             sum += i;
-            j = i;
             System.out.println("i is " + i + " and sum is " + sum);
         }
         System.out.println(j + " sum is " + sum);
+
+        //Chanllenge Exercise:
+        String searchMe = "peter piper picked a peck of pickled";
+        int num = 0;
+        for (int i = 0; i < searchMe.length(); i++) {
+            if (searchMe.charAt(i) != 'p')
+                continue;
+            num++;
+        }
+        System.out.println("Found " + num + "p's in the string.");
+
+        //Exercise: find the position of target character in a string.
+        String str = "abc pol ijk def xyz";
+        char target = 'f';
+        int n = 0;
+        boolean isFound = false;
+        for (int i = 0 ; i < str.length() ; i++) {
+            if (str.charAt(i) != target)
+                continue;
+            n = i+1;
+            isFound = true;
+            break;
+        }
+        if (isFound) {
+            System.out.println("Found" + target + " at the " + n + "th character");
+        } else {
+            System.out.println("Not Found");
+        }
+
+
 
         // Scenario: Count how many female and male toilet in a 100-floor building
         // Female toilet only in even number floor, male toilet only in odd number floor
@@ -117,5 +152,6 @@ public class DemoForLoop {
             }
         }
         System.out.println("There are " + mToilet + "Male toilets and " + fToilet + "Female toilets.");
+
     }
 }
