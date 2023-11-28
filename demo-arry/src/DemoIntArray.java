@@ -37,10 +37,10 @@ public class DemoIntArray {
                 x[i] = xStr.charAt(i);
                 
             }
-            System.out.println(x[i] + " ");
+            //System.out.println(x[i] + " ");
         }
 
-        System.out.println();
+        //System.out.println();
 
         int[] arr1 = new int[] { 10, 20, 11, 65, 22, 14 };
         int[] arr2 = arr1;
@@ -49,6 +49,36 @@ public class DemoIntArray {
             System.out.print("arr1[" + i + "] is " + arr1[i] + " ");
             System.out.println("arr2[" + i + "] is " + arr2[i]);
         }
+
+        //Default value of int[]
+        int[] arr5 = new int[3];
+        for (int i = 0 ; i < arr5.length; i++) {
+            arr5[i] = i+1;
+            System.out.print(arr5[i]);
+        }
+        System.out.println();
+            //arr5 is storing the address of the arry object
+            //we use arr5[i] find out the 3 values stored in the arry object
+
+        for (int i = arr5.length -1; i >= 0 ; i--){
+            arr5[i] = i+1;
+            System.out.print(arr5[i]);
+            if(i>0) {
+                System.out.print(" ");
+            } else {
+                System.out.print("\n");
+            }
+        }
+
+        //String & object
+        String str = "hello"; //str is storing the address of String object hello
+        String str2 = new String("hello"); // str2 is storing the address of String
+        String str3 = String.valueOf("hello");
+
+        System.out.println(str3);
+
+        String[] arrName = new String[] {"Vincent", "Oscar", ""};
+
     }
 
 }
