@@ -14,22 +14,55 @@ public class JavaQuest8 {
 
     // Your program should be able to handle all the above test case.
     int secondMax;
+
     // code here
-    secondMax = sortAscending(nums)[nums.length-2];
+
+    // Sorting first, look for the second last element of sorted array
+    secondMax = sortAscending(nums)[nums.length - 2];
+
+    // Alternative method: no sorting, direct extract value and store in firstMax
+    secondMax = noSortSecondMax(nums);
 
     System.out.println("Second Max = " + secondMax);
   }
 
-  public static int[] sortAscending (int[] arr){  //Bubble Sort
-    for (int i = 0; i < arr.length-1 ; i++){
-      for (int j = 0 ; j < arr.length-1-i; j++){
-        if(arr[j]>arr[j+1]){
+  public static int[] sortAscending(int[] arr) { // Bubble Sort
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
           int temp = arr[j];
-          arr[j] = arr[j+1];
-          arr[j+1] = temp;
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
         }
       }
     }
     return arr;
+  }
+
+  public static int noSortSecondMax(int[] arr) {
+    int max1; // for the max value
+    int max2; // for the second max value
+    if (arr[0] < arr[1]) {
+      max2 = arr[0];
+      max1 = arr[1];
+    } else {
+      max2 = arr[1];
+      max1 = arr[0];
+    }
+
+    if (arr.length > 2) {
+      for (int i = 2; i < arr.length; i++) {
+
+        if (arr[i] > max2) {
+          if (arr[i] > max1) {
+            max2 = max1;
+            max1 = arr[i];
+          } else {
+            max2 = arr[i];
+          }
+        }
+      }
+    }
+    return max2;
   }
 }
