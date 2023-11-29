@@ -65,8 +65,8 @@ public class DemoWhileLoop {
         }
 
         for (int i = 1 ; i < arrInt.length ; i++){
-            for (int j = i-1; j >=0; j--){
-                int key = arrint[i];
+            for (int k = i-1; j >=0; j--){
+                int key2 = arrInt[i];
                 if(arrInt[k] > key){
                     arrInt[k+1] = arrInt[k];
                 } else {

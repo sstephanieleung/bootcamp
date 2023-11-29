@@ -62,19 +62,37 @@ public class DemoIntArray3 {
                 }
             }
         }
-        System.out.println(Arrays.toString(arr3));
+        System.out.println(Arrays.toString(arr3));   
+        
+        String s = "abcabcabcabcabc";
+        char[] arr5 = new char[s. length()];
+        // Convert string to array of char value 
+        for (int i = 0; i < s.length(); i++){
+            arr5[i] = s.charAt(i);
+        }
+        //Alternative
+        char[] arr6 = s.toCharArray();
+        System.out.println(Arrays.toString(arr6));
 
-        //Try: Insertion Sort
-         int[] arr5 = new int[] { 100, 4, 1050, 500, -20 };
-         int pointer = 0;
-         int lookingValue;
-         for (int i = 1; i < arr5.length ; i++){
-            pointer = i-1;
-            lookingValue = arr[i];
-            while (pointer >=0 && arr5[pointer] > lookingValue){
-                arr5
+        //convert all 'a' to 'c'
+        char[] arr7 = new char[s. length()];        
+        for (int i = 0; i < s.length() ; i++){
+            if(arr7[i]=='a'){
+                arr7[i] = 'c';
+                continue;
+            } else {
+                arr7[i] = s.charAt(i);
             }
+        }
 
-         }
+        //Replace (string method)
+        String str4 = "abcabcabcabcabcabc";
+        String result4 = str4.replace('a', 'c');  //replace a by c
+        System.out.println("str4 = " + str4);
+        System.out.println("result4 = " + result4);  //result4 = cbccbccbccbccbccbc
+
+        //Replace a pattern "ab" by "ij"
+        System.out.println(str4.replace("ab", "ij")); //ijcijcijcijcijcijc
+        
     }
 }

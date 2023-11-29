@@ -11,11 +11,29 @@ public class JavaQuest6 {
     int x1 = 0;
     int x2 = 1;
     int f = x2;
-    for (int i = 0 ; i < 15 ; i++){
+    for (int i = 0; i < 15; i++) {
       System.out.print(f + " ");
       f = x1 + x2;
       x1 = x2;
       x2 = f;
+    }
+    System.out.println("\n");
+
+    x1 = 0;
+    x2 = 1;
+    f = x2;
+    for (int i = 0; i < 15; i++) {
+      if (i < 2) {
+        if (i > 0) {
+          System.out.print(i + " ");
+          continue;
+        }
+      }
+      f = x1 + x2;
+      x1 = x2;
+      x2 = f;
+
+      System.out.print(f + " ");
     }
     System.out.println("\n");
   }
