@@ -17,26 +17,17 @@ public class JavaQuest8 {
 
     // code here
 
-    // Sorting first, look for the second last element of sorted array
-    secondMax = sortAscending(nums)[nums.length - 2];
+    
 
-    // Alternative method: no sorting, direct extract value and store in firstMax
+    // First Method: no sorting, direct extract value and store in firstMax
+    
     secondMax = noSortSecondMax(nums);
 
-    System.out.println("Second Max = " + secondMax);
-  }
+    // Second Method: Sorting first, look for the second last element of sorted array
+    sortAscending(nums);
+    secondMax = nums[nums.length - 2];
 
-  public static int[] sortAscending(int[] arr) { // Bubble Sort
-    for (int i = 0; i < arr.length - 1; i++) {
-      for (int j = 0; j < arr.length - 1 - i; j++) {
-        if (arr[j] > arr[j + 1]) {
-          int temp = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = temp;
-        }
-      }
-    }
-    return arr;
+    System.out.println("Second Max = " + secondMax);
   }
 
   public static int noSortSecondMax(int[] arr) {
@@ -64,5 +55,18 @@ public class JavaQuest8 {
       }
     }
     return max2;
+  }
+
+  public static void sortAscending(int[] arr) { // Bubble Sort
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          int temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+    return;
   }
 }
