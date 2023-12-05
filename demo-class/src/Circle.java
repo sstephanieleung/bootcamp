@@ -19,19 +19,18 @@ public class Circle {
         return this.radius;
     }
 
-    //Other methods
+    //Other instance methods
     public double diameter(){
         return 2*this.radius;
     }
     public double area(){
-        double pi = Math.PI;
-        return pi*this.radius*this.radius;
+        return this.sq() * Math.PI;
     }
     public double sq(){
-        return this.radius * this.radius;
+        return Math.pow(this.radius, 2);
     }
     public double cube(){
-        return this.radius * this.radius * this.radius;
+        return Math.pow(this.radius,3);
     }
 
     //main

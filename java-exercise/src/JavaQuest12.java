@@ -32,7 +32,7 @@ public class JavaQuest12 {
   // Code a method here to return an array of two numbers that sum up to the
   // target
   public static int[] twoSum(int[] arr, int target){
-    int[] result = new int[]{-1, 1};
+    int[] result = new int[]{-1, -1};
     for (int i = 0 ; i < arr.length; i++){
       for (int j = i; j < arr.length; j++){
         if(i !=j &&arr[i]+arr[j] == target ){
