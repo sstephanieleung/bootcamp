@@ -22,8 +22,10 @@ public class Person {
     }
 
     public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        // this.firstName = firstName;
+        // this.lastName = lastName;
+        super(firstName, lastName); 
+        this.age = age;
     }
 
     // Instance Method / Object Method
@@ -69,4 +71,20 @@ public class Person {
         return this.firstName.concat(" ").concat(this.lastName).toLowerCase();
     }
 
+    //Instance Method
+    //1. Belongs to the Object (Person p1 = new Person(); p1.swim();)
+    //2. Able to control the instance variable by "this"
+
+    //Static Method
+    //1. Belongs to the class (ClassName.staticMethod()) -> Person.swim(3);
+    //2. Not able to read/write instance variables
+    //3. The output complately derived by the input parameters
+
+    public void swim(){
+        System.out.println("hello");
+    }
+
+    public static void swimming(){
+        System.out.println("I'm swimming.");
+    }
 }
