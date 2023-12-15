@@ -16,10 +16,9 @@
 // Input: n = 1
 // Output: [0]
 
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class JavaQuest16 {
   // Given an integer n (n > 0), Find n unique Integers Sum up to Zero
@@ -91,7 +90,7 @@ public class JavaQuest16 {
 
       }
     }
-    arr[arr.length - 1] = numToZero;
+    arr[arr.length - 1] = numToZero; //the last integer is balancing the sum of previous integers
     System.out.println(Arrays.toString(arr));
     return arr;
   }

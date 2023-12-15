@@ -68,6 +68,7 @@ public class DemoStringBuilder {
         System.out.println(stringConcat());
         System.out.println(stringBuilderConcat());// <- the runtime of StringBuilder operation is much less than that of string.
         System.out.println(sbChar.indexOf("1"));
+        
 
     }
 
