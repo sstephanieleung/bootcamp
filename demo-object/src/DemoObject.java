@@ -35,6 +35,10 @@ public class DemoObject { //extend Object implicity
         String s2 = "abc";
         System.out.println(s1 == s2);  //check if they are the same object
         System.out.println(s1.equals(s2)); // check if they or the same value <- String class override the .equals method of Object class
+        System.out.println(s1.hashCode()); //99162322
+
+        Long l = 1234876985566709L;
+        System.out.println(l.hashCode()); //873760488
 
 
     }
