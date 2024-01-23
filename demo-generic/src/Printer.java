@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class Printer<T extends Number> { // T could be any type / object class
+public class Printer<T extends Number, K> { // T could be any type / object class
 
     public List<T> values;
 
