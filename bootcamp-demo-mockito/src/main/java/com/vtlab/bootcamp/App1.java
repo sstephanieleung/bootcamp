@@ -10,6 +10,7 @@ public class App1 {
 
     private App2 app2;
 
+    //if you want to use @InjectMock, then you have to create this all args constructor
     public App1(App2 app2) {
         this.app2 = app2;
     }

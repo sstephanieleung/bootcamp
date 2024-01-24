@@ -11,6 +11,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -32,13 +33,16 @@ public class App1Test {
 
     }
 
+    @InjectMocks
+    private App1 app1;
+
     @Test
     void testAdd_Case1() {
 
         // if someone call dependency.provider(10,4), return -323
         Mockito.when(dependency.provider(10, 4)).thenReturn(-323);
 
-        App1 app1 = new App1(dependency);
+        //App1 app1 = new App1(dependency);
         int result = app1.add(5, 4);
         assertEquals(177, result);
     }
